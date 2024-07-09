@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static',filename='/css/main.css')}}"
+		/>
+		<link rel="icon" href="../static/images/books.png" />
+		<title>Login</title>
+	</head>
+	<body>
+		<div class="mx-auto pt-9 sm:px-20 h-screen space-y-6 dark:bg-neutral-900">
+			<div class="flex place-content-between dark:text-white">
+				<div class="flex place-content-center items-center space-x-2">
+					<img
+						src="../static/images/logo.png"
+						alt=""
+						width="40"
+						class="text-white"
+					/>
+					<span class="font-teko font-normal text-3xl">StudyVault </span>
+				</div>
+			</div>
+			<div class="flex gap-4">
+				<div
+					class="bg-[#f1f1f1] h-full p-16 rounded-xl dark:bg-neutral-700 dark:text-white"
+				>
+					<p class="font-heebo font-black text-3xl text-center">
+						Encuentre los recursos adecuados para su curso
+					</p>
+					<p class="text-center font-heebo text-xl mt-4">
+						¡Descrubre contenido para el curso que necesites!
+					</p>
+					<img
+						src="../static/images/login.png"
+						alt=""
+						class="mx-auto mt-11 p-10"
+						width="500"
+						height="500"
+					/>
+					<p class="text-center font-heebo mt-16">
+						¡Acceda a los materiales del curso en cualquier momento y en
+						cualquier lugar!
+					</p>
+				</div>
+
+				<div class="p-11 space-y-6 mx-auto my-auto dark:text-white">
+					<p class="font-heebo font-bold text-3xl">Comienza con StudyVault</p>
+					<div class="dark:bg-white p-6 rounded-md shadow-md">
+						<form
+							method="POST"
+							action="{{ url_for('login_blueprint.loginF') }}"
+							class="w-full p-2"
+						>
+							<div class="mb-4">
+								<label
+									for="email"
+									class="block text-xl font-medium text-gray-700"
+									>Correo Electrónico</label
+								>
+								<input
+									type="email"
+									name="email"
+									id="email"
+									class="w-full border dark:border-neutral-900 p-3 rounded-md dark:text-black"
+									required
+								/>
+							</div>
+
+							<div class="flex items-center justify-between">
+								<button
+									type="submit"
+									class="dark:bg-neutral-700 hover:bg-neutral-800 rounded-md p-4 flex items-center space-x-4 w-full justify-center"
+								>
+									<span class="font-heebo font-semibold text-xl"
+										>Iniciar Sesión</span
+									>
+								</button>
+							</div>
+						</form>
+					</div>
+					<!-- <div class="flex items-center place-content-center">
+						<button
+							class="bg-zinc-200 hover:bg-zinc-300 rounded-md p-4 flex items-center space-x-4"
+						>
+							<span
+								class="icon-[flat-color-icons--google]"
+								style="width: 40px; height: 40px"
+							></span>
+							<span class="font-heebo font-semibold text-xl text-black">
+								Sign in Google</span
+							>
+						</button>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

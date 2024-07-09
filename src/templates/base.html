@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>{% block title %} {% endblock %}</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static',filename='/css/main.css')}}"
+		/>
+		<link rel="icon" href="../static/images/books.png" />
+	</head>
+
+	<body>
+		<div class="flex w-screen">
+			<div class="bg-neutral-300 h-screen p-5 w-[114px]">
+				<div class="bg-white place-content-center flex rounded-full p-4 mt-6">
+					<img src="../static/images/logo.png" width="40" alt="" class="" />
+				</div>
+				<div
+					class="space-y-8 mt-12 items-center flex flex-col place-content-between"
+				>
+					<div class="space-y-8 flex flex-col">
+						<a class="sections" href="">
+							<span
+								class="icon-[solar--book-bookmark-broken]"
+								style="width: 45px; height: 45px"
+							></span>
+						</a>
+						<a href="" class="sections">
+							<span
+								class="icon-[carbon--classification]"
+								style="width: 45px; height: 45px; color: black"
+							></span>
+						</a>
+						<a href="" class="sections">
+							<span
+								class="icon-[ph--chalkboard-teacher]"
+								style="width: 45px; height: 45px"
+							></span>
+						</a>
+					</div>
+					<div class="my-auto">
+						<a href="" class="sections">
+							<span
+								class="icon-[solar--settings-linear]"
+								style="width: 45px; height: 45px; color: black"
+							></span>
+						</a>
+					</div>
+				</div>
+			</div>
+			{% block content %} {% endblock %}
+		</div>
+	</body>
+</html>
